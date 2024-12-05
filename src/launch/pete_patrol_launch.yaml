@@ -1,0 +1,16 @@
+launch:
+
+- node:
+    pkg: "pete_patrol"
+    exec: "ros2_ps5controller"
+    name: "controller"
+
+- node:
+    pkg: "pete_patrol"
+    exec: "ros2_drive"
+    name: "drive"
+    
+- node:
+    pkg: "aruco_tracker"
+    exec: "aruco_tracker_node"
+    name: "aruco"
