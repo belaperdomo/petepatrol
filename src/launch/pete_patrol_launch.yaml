@@ -1,5 +1,19 @@
 launch:
 
+# - include:
+    # file: "$(find-pkg-share rplidar_ros)/launch/rplidar_a2m8_launch.py"
+    # arg:
+    #     - name: "serial_port"
+    #       value: "/dev/ttyUSB0"
+    #     - name: "serial_baudrate"
+    #       value: "115200"
+    #     - name: "frame_id"
+    #       value: "laser"
+    #     - name: "inverted"
+    #       value: "false"
+    #     - name: "angle_compensate"
+    #       value: "true"
+
 - node:
     pkg: "pete_patrol"
     exec: "ros2_ps5controller"
@@ -10,7 +24,12 @@ launch:
     exec: "ros2_drive"
     name: "drive"
     
+# - node:
+#    pkg: "aruco_tracker"
+#    exec: "aruco_tracker_node"
+#    name: "aruco"
+    
 - node:
-    pkg: "aruco_tracker"
-    exec: "aruco_tracker_node"
-    name: "aruco"
+    pkg: "person_tracker"
+    exec: "person_tracker_node"
+    name: "person"

@@ -50,7 +50,7 @@ class controllerNode(Node):
         while rclpy.ok():
             c1 = controller.ps5controller('/dev/input/event1') #MM switch to meet with new input
 
-            while True: #JV
+            while True:
                 for event in c1.controller.read_loop():
                     c1.update_joystick_position(event)
                     # left_joystick, right_joystick = c1.get_joystick_position()
